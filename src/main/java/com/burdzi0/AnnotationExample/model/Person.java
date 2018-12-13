@@ -1,10 +1,20 @@
 package com.burdzi0.AnnotationExample.model;
 
+import com.burdzi0.AnnotationExample.annotation.File;
 import com.burdzi0.AnnotationExample.annotation.JsonTransformer;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 @JsonTransformer
+@File
+@Entity
 public class Person {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
 	private String firstName;

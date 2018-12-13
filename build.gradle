@@ -12,7 +12,9 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.json/json
+    implementation 'org.hibernate:hibernate-core:5.3.7.Final'
+    implementation group: 'com.h2database', name: 'h2', version: '1.4.197'
+    implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
     compile group: 'org.json', name: 'json', version: '20180813'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
